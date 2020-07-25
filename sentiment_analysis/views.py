@@ -6,6 +6,7 @@ from sentiment_analysis.models import Sentence
 from django.views.decorators.csrf import csrf_exempt
 import json
 
+# A comment
 
 @csrf_exempt
 def sentimentResults(request):
