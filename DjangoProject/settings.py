@@ -24,8 +24,9 @@ SECRET_KEY = 'oyw672hr*_ob!=)ueg0iks&*dl2*br_h)s2062n4=q83!y7_^6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['js-django-api.herokuapp.com', '127.0.0.1']
-
+# ALLOWED_HOSTS = ['js-django-api.herokuapp.com', '127.0.0.1']
+CORS_ORIGIN_ALLOW_ALL = True
+ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
@@ -41,6 +42,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
