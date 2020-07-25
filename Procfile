@@ -1,1 +1,1 @@
-web: gunicorn API_SRC.wsgi --log-file -
+web: gunicorn DjangoProject.wsgi --log-file -
